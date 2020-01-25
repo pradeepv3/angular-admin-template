@@ -1,0 +1,22 @@
+<div class="card progressbar">
+  <div class="card-body">
+    <div class="float-right" *ngIf="settingsMenu == 'true'">
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-settings"></i> 
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+              <button class="dropdown-item" type="button">Action</button>
+              <button class="dropdown-item" type="button">Another action</button>
+              <button class="dropdown-item" type="button">Something else here</button>
+            </div>
+        </div>
+    </div>
+    <div class="progress-value">{{progressValue}}</div>
+    <div class="progress-title">{{progressTitle}}</div>
+    <div class="progress-bar-wrapper mt-3 mb-3">
+       <progressbar max="{{progressBarMaxValue}}" [value]="progressBarValue" type="{{progressBarType}}" [striped]="progressBarStriped" [animate]="progressBarAnimated"><i>{{progressBarValue}} / {{progressBarMaxValue}}</i></progressbar> 
+    </div>
+    <p class="progress-txt">{{progressText}} </p>
+  </div>
+</div>

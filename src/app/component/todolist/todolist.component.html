@@ -1,0 +1,35 @@
+<div class="card todolist {{wrapperClass}}">
+  <div class="card-header">
+    <i class="icon-list"></i> Todo List
+  </div>
+  <div class="card-body ">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center"
+        *ngFor="let data of todolistData; let i = index">
+        <div class="col-9">
+          <span *ngIf="data.completed; else doneitem  "><del>{{data.label}}</del> </span>
+          <ng-template #doneitem><span>{{data.label}}</span></ng-template>
+        </div>
+        <div class="col-3 card-action text-right text-nowrap">
+          <a href="javascript:void(0)" (click)="onItemCompleted(i)"><i class="icon-check mr-2"></i></a>
+          <a href="javascript:void(0)" (click)="onItemDeleted(i)"><i class="icon-trash"></i></a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <div class="card-footer">
+    <form class="" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+      <div class="">
+        <div class="input-group">
+          <input name="item" [(ngModel)]="todo.item" type="text" class="form-control  input-lg"
+            placeholder="Enter value" required>
+          <span class="input-group-btn">
+            <button class="btn btn-primary">Add Item</button>
+          </span>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

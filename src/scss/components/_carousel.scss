@@ -1,0 +1,18 @@
+$carouselHeight: 500px;
+
+.carousel-wrapper {
+  height: $carouselHeight;
+  & .carousel-inner {
+    height: $carouselHeight;
+  }
+}
+
+.carousel-multilist {
+  .carousel-item {
+    margin-right: 0;
+  }
+  .carousel-control {
+    position: absolute;
+    z-index: 99;
+  }
+}

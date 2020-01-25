@@ -1,0 +1,23 @@
+<aside class="sidebar-nav">
+	<div class="">
+    <ul class="nav flex-column">
+      <li class="nav-item" *ngFor="let item of navItem">
+        <!-- Single level menu -->
+				<a *ngIf="!item.children else childrenNav" class="nav-link flex-row" routerLink="{{item.route}}">
+          <i class="icon-{{item.iconName}}"></i> <span>{{item.displayName}}</span>
+        </a>
+        <ng-template #childrenNav>
+          <a class="nav-link dropdown-toggle collapsed" href="#menu{{item.displayName}}" data-toggle="collapse" aria-expanded="false">
+          <i class="icon-{{item.iconName}}"></i> {{item.displayName}}</a>
+          <div class="nav-submenu collapse" id="menu{{item.displayName}}" aria-expanded="false">
+            <ul class="nav flex-column">
+              <li class="nav-item" *ngFor="let subMenu of item.children">
+                <a routerLink="{{subMenu.route}}" class="nav-link"><i class="icon-{{subMenu.iconName}}"></i> {{subMenu.displayName}} <span *ngIf="subMenu.badgeText" class="badge badge-primary">{{subMenu.badgeText}}</span></a>
+              </li>
+            </ul>
+          </div>
+        </ng-template>
+			</li>
+    </ul>
+	</div>
+</aside>

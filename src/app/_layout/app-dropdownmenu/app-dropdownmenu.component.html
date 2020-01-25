@@ -1,0 +1,14 @@
+<div class="dropdown-menu dropdown-menu-right" [ngSwitch]="showmenu">
+  <div *ngSwitchCase = "'notification'"> 
+    <div class="dropdown-header">New Notification</div>
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+  <div *ngSwitchCase = "'listitem'">
+    <div class="dropdown-header">Today Action Item</div>
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>

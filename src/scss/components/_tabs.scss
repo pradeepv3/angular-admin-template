@@ -1,0 +1,27 @@
+$tabBorderColor: #ccc;
+.tab-container {
+  & .nav-tabs {
+    
+    border: 0px;
+
+    & .nav-item {
+      & .nav-link {
+        color: #333;
+        & .badge {
+          margin-left: 5px;
+        }
+        &.active {
+          border-color: $tabBorderColor $tabBorderColor #FFF;
+        }
+      }
+    }
+  }
+  & .tab-content {
+    padding: 10px; 
+    background: #FFF;
+    border: 1px solid $tabBorderColor;
+    & *:last-child {
+      margin: 0;
+    }
+  }
+}

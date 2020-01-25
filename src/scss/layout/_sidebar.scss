@@ -1,0 +1,128 @@
+.sidebar {
+  float: left;
+  height: calc(100vh - 50px);
+  background: #fff;
+  box-shadow: 0 0 12px #ccc;
+  position: fixed;
+  left: -$sidebarWidth;
+  overflow-y: auto;
+  z-index: 9;
+
+  & .sidebar-nav {
+    & .nav-item {
+      border-bottom: 1px solid #E2E2E2;
+      line-height: 35px;
+      position: relative;
+      font-size: .85rem;
+
+      & .dropdown-toggle {
+        &::after {
+          position: absolute;
+          top: 24px;
+          right: 13px;
+          transform: rotate(180deg);
+        }
+
+        &.collapsed {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      & .nav-link {
+        color: #333;
+
+        & i[class*="icon-"] {
+          margin: 0 10px 0 0;
+          width: 25px;
+          text-align: center;
+          font-size: 14px;
+          color: #696969;
+          opacity: .8;
+        }
+      }
+
+      & .nav-submenu {
+        border-top: 1px solid #e2e2e2;
+
+        //background: #fafafa;
+        & .nav-link {
+          padding: 2px 0 2px 18px;
+          border-bottom: 1px solid #eaeaea;
+
+          & i[class*="icon-"] {
+            font-size: 13px;
+          }
+        }
+
+        & ul li {
+          border: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .show-sidebar-lg {
+    & .sidebar {
+      left: 0;
+    }
+
+    & .main-panel {
+      margin-left: $sidebarWidth;
+      width: calc(100% - #{$sidebarWidth});
+      float: left;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  body {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .main-content {
+    & .sidebar {
+      width: 0;
+      left: 0;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    & .main-panel {
+      margin: 0px;
+      width: 100%;
+    }
+  }
+
+  .show-sidebar-md {
+    overflow: hidden;
+
+    & .sidebar {
+      width: $sidebarWidth;
+      z-index: 1000;
+      overflow-y: scroll;
+      @include transition(all, 1s, ease)
+    }
+
+    &::before {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 99;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: rgba(0, 0, 0, .7);
+      @include transition(all, 1s, ease)
+    }
+  }
+}

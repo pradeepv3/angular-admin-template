@@ -1,0 +1,26 @@
+.accordion {
+  & .panel {
+    &.card {
+      margin-top: -2px;
+    }
+
+    .panel-heading {
+      padding: 10px;
+      & .panel-title {
+        & .btn-link {
+          color: #333;
+          margin: 0;
+          padding: 0;
+          line-height: 25px;
+        }
+
+        & .accordion-toggle {
+          span.badge {
+            font-size: 17px;
+            top: 1px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+<div class="row mb-4">
+    <div class="col-12 col-md-6 mb-md-4 mb-xl-0">
+    <cards
+      cardWrapperClass= "">
+      <div cardHeader>Basic Date Picker</div>
+        <div class="row">
+          <div class="col-xs-12 col-12 col-md-6 form-group">
+          <input type="text"
+                placeholder="Datepicker"
+                class="form-control"
+                bsDatepicker
+                [bsConfig]="{ isAnimated: true }">
+        </div>
+        <div class="col-xs-12 col-12 col-md-6 form-group">
+          <input type="text"
+                placeholder="Daterangepicker"
+                class="form-control"
+                bsDaterangepicker
+                [bsConfig]="{ isAnimated: true }">
+        </div>
+        </div>
+    </cards>
+  </div>
+  <div class="col-12 col-md-6">
+    <cards cardWrapperClass= "">
+      <div cardHeader>Basic Date Picker Initial state</div>
+        <div class="row">
+          <div class="col-xs-12 col-12 col-md-6 form-group">
+            <input type="text"
+                  placeholder="Datepicker"
+                  class="form-control"
+                  bsDatepicker
+                  [bsValue]="bsValue"
+                  [bsConfig]="{ isAnimated: true }">
+          </div>
+          <div class="col-xs-12 col-12 col-md-6 form-group">
+            <input type="text"
+                  placeholder="Daterangepicker"
+                  class="form-control"
+                  bsDaterangepicker
+                  [(ngModel)]="bsRangeValue"
+                  [bsConfig]="{ isAnimated: true }">
+          </div>
+        </div>
+    </cards>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <cards>
+      <div cardHeader>Custom Date Format</div>
+    <form [formGroup]="Datepickerform">
+       <div class="row">
+    <div class="col-xs-12 col-md-5 col-lg-4 form-group">
+      <input
+        class="form-control"
+        #datepickerYMD="bsDatepicker"
+        bsDatepicker
+        formControlName="dateYMD"
+        [bsConfig]="{ dateInputFormat: 'YYYY-MM-DD' }">
+    </div>
+    <div class="col-xs-12 col-12 col-md-3 form-group">
+      <button class="btn btn-success" (click)="datepickerYMD.toggle()" [attr.aria-expanded]="datepickerYMD.isOpen" type="button">Date Picker</button>
+    </div>
+  </div>
+  <br>
+ 
+  <div class="row">
+    <div class="col-xs-12 col-md-5 col-lg-4 form-group">
+      <input
+        class="form-control"
+        #datepickerMDY="bsDatepicker"
+        bsDatepicker
+        formControlName="dateMDY"
+        [bsConfig]="{ dateInputFormat: 'MM/DD/YYYY' }">
+    </div>
+    <div class="col-xs-12 col-12 col-md-3 form-group">
+      <button class="btn btn-success" (click)="datepickerMDY.toggle()" [attr.aria-expanded]="datepickerMDY.isOpen" type="button">Date Picker</button>
+    </div>
+  </div>
+  <br>
+ 
+  <div class="row">
+    <div class="col-xs-12 col-md-5 col-lg-4 form-group">
+      <input
+        class="form-control"
+        #datepickerFull="bsDatepicker"
+        bsDatepicker
+        formControlName="dateFull"
+        [bsConfig]="{ dateInputFormat: 'MMMM Do YYYY, h:mm:ss a' }">
+    </div>
+    <div class="col-xs-12 col-12 col-md-3 form-group">
+      <button class="btn btn-success" (click)="datepickerFull.toggle()" [attr.aria-expanded]="datepickerFull.isOpen" type="button">Date Picker</button>
+    </div>
+  </div>
+ 
+  <div class="row">
+    <div class="col-xs-12 col-md-5 col-lg-4 form-group">
+      <input type="text"
+        class="form-control"
+        formControlName="dateRange"
+        #daterangepicker="bsDaterangepicker"
+        bsDaterangepicker
+        [bsConfig]="{ rangeInputFormat: 'MMMM Do YYYY, h:mm:ss a' }">
+    </div>
+    <div class="col-xs-12 col-12 col-md-3 form-group">
+      <button class="btn btn-success" (click)="daterangepicker.toggle()" [attr.aria-expanded]="daterangepicker.isOpen" type="button">Date Range Picker</button>
+    </div>
+  </div>
+    </form>
+    </cards>
+  </div>
+</div>

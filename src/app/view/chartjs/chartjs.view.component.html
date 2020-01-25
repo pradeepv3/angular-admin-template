@@ -1,0 +1,106 @@
+<div class="row mt-5">
+    <div class="col-12 col-md-6  mb-4">
+      <div class="card">
+        <div class="card-header"><i class="icon-graph"></i> Sales Overview (Bar Chart)</div>
+        <div class="card-body">
+          <div class="row"> 
+            <div class="col-12">
+              <chartjs
+                
+                chartid="line-graph"
+                chartType="bar"
+                chartHeight = "140"
+                chartWidth = "100%"
+                [chartLabels] = "barChartLabels"
+                [chartDataset] = "barChartData"
+                [chartOptions] = "barChartOptions"
+                [chartLegend] = "barChartLegend"
+              ></chartjs>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6  mb-4">
+      <div class="card">
+        <div class="card-header "><i class="icon-graph"></i> Sales Overview (Line Chart)</div>
+        <div class="card-body">
+          <chartjs
+            (addgraphItem) = "addnewItem()"
+            chartId="line-graph"
+            chartType="line"
+            chartHeight = "150"
+            chartWidth = "100%"
+            [chartLabels] = "lineChartLabels"
+            [chartDataset] = "lineChartData"
+            [chartOptions] = "lineChartOptions"
+            [chartLegend] = "lineChartLegend"
+          ></chartjs>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-12 col-md-6  mb-4">
+      <div class="card">
+        <div class="card-header"><i class="icon-graph"></i>  Sales Overview (Doughnut Graph)</div>
+        <div class="card-body">
+          <div class="row"> 
+            <div class="col-12">
+              <chartjs
+                chartid="line-graph"
+                chartType="doughnut"
+                chartHeight = "140"
+                chartWidth = "100%"
+                [chartLabels] = doughnutChartLabels
+                [chartDataset] = doughnutChartData
+                [chartOptions] = "doughnutChartOptions"
+              ></chartjs>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card">
+        <div class="card-header "><i class="icon-graph"></i>  Sales Overview (PIE Chart)</div>
+        <div class="card-body">
+          <chartjs
+              chartId="line-graph"
+              chartType="pie"
+              chartHeight = "150"
+              chartWidth = "100%"
+              [chartLabels] = pieChartLabels
+              [chartDataset] = pieChartData
+              [chartOptions] = pieChartOptions
+            ></chartjs>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12 col-md-6">
+      <div class="card">
+        <div class="card-header"><i class="icon-graph"></i>  Sales Overview (Polar Area Graph)</div>
+        <div class="card-body">
+          <div class="row"> 
+            <div class="col-12">
+              <chartjs
+                chartid="line-graph"
+                chartType="polarArea"
+                chartHeight = "140"
+                chartWidth = "100%"
+                [chartLabels] = polarChartLabels
+                [chartDataset] = polarChartData
+                [chartOptions] = "polarChartOptions"
+              ></chartjs>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

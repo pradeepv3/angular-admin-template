@@ -1,0 +1,49 @@
+.form-group {
+  .form-input {
+    
+  }
+}
+
+.error-msg {
+  display: none;
+}
+.error {
+  & .error-msg {
+    display: inline-block;
+    font-size: 12px;
+    color: red;
+  }
+  & input,
+  & select {
+    border: 1px solid red;
+  }
+}
+
+
+.slider-input {
+  height: 55px;
+  & input {
+    display: inline-block !important;
+    text-align: center;
+    width: 75px;
+    margin-left: 30px;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+ 
+}
+
+ @media only screen and (max-width: 420px) {
+      .slider.slider-horizontal {
+        width: 180px;
+      }
+  }

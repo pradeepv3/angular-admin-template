@@ -1,0 +1,34 @@
+.main-content {
+    padding: 0;
+    @include transition (all, 1s, ease);
+
+    &>.row {
+        margin: 0;
+    }
+
+    & .sidebar {
+        width: $sidebarWidth;
+        @include transition (all, .5s, ease);
+
+        & .nav-item {
+            white-space: nowrap;
+        }
+    }
+
+    & .main-panel {
+        width: 100%;
+        position: relative;
+        @include transition (all, .5s, ease);
+
+        & .breadcrumb {
+            border-radius: 0;
+            background: #FFF;
+            border-bottom: 1px solid #CCC;
+        }
+
+        & .main-panel_content {
+            padding: 0px 20px 70px;
+            min-height: calc(100vh - 120px);
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-12 mb-4">
+    <cards>
+      <div cardHeader>Basic</div>
+      <div class="row">
+        <div class="col-md-3 mb-md-2 mb-xl-0">
+        <button type="button" class="btn btn-primary" tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Live Demo</button>
+      </div>
+
+      </div>
+    </cards>
+  </div>
+
+  <div class="col-12 mb-4">
+    <cards>
+      <div cardHeader>Placement</div>
+        <button *ngFor="let placement of tooltipPlacement" 
+          type="button" 
+          class="btn btn-primary mr-1 mb-2" 
+          placement="{{placement}}"
+          tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Tooltip on {{placement}}</button>
+    </cards>
+  </div>
+
+  <div class="col-12 mb-4">
+    <cards>
+      <div cardHeader>Dismiss on next click</div>
+      <p>Use the <code>focus</code> trigger to dismiss popovers on the next click that the user makes.</p>
+      <button type="button" class="btn btn-success"
+        tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        triggers="focus">
+        Dismissible tooltip
+      </button>
+    </cards>
+  </div>
+</div>

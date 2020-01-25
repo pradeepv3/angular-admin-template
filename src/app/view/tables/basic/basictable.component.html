@@ -1,0 +1,152 @@
+<div class="row">
+  <div class="col-md12 col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-header">
+        <i class="icon-list"></i>  Light Table
+        <!-- <input [(ngModel)] = "searchname" type="text" class="form-control" name="searchname" /> -->
+        </div>
+      <div class="chart-body">
+        <table class="table mb-0">
+          <thead>
+      <tr>
+        <th scope="col">#</th><th scope="col">First</th><th scope="col">Gender</th><th scope="col">Company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let data of tableData; let i = index">
+        <ng-template [ngIf] = "i< 3">
+            <td>{{i+1}}</td><td>{{data.name}}</td><td>{{data.gender}}</td><td>{{data.company|titlecase }}</td>
+        </ng-template>
+      </tr>
+    </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md12 col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-header">
+        <i class="icon-list"></i>  Dark Table
+      </div>
+      <div class="chart-body">
+        <table class="table table-dark  mb-0">
+          <thead>
+            <tr>
+              <th scope="col">#</th><th scope="col">First</th><th scope="col">Gender</th><th scope="col">Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let data of tableData; let i = index">
+              <ng-template [ngIf] = "i< 3">
+                  <td>{{i+1}}</td><td>{{data.name}}</td><td>{{data.gender}}</td><td>{{data.company|titlecase }}</td>
+              </ng-template>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md12 col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-header">
+        <i class="icon-list"></i>  Light Table
+        <!-- <input [(ngModel)] = "searchname" type="text" class="form-control" name="searchname" /> -->
+        </div>
+      <div class="chart-body">
+        <table class="table mb-0">
+          <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th><th scope="col">First</th><th scope="col">Gender</th><th scope="col">Company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let data of tableData; let i = index">
+        <ng-template [ngIf] = "i< 3">
+            <td>{{i+1}}</td><td>{{data.name}}</td><td>{{data.gender}}</td><td>{{data.company|titlecase }}</td>
+        </ng-template>
+      </tr>
+    </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md12 col-lg-6  mb-4">
+    <div class="card">
+      <div class="card-header">
+        <i class="icon-list"></i>  Dark Table
+      </div>
+      <div class="chart-body">
+        <table class="table mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th><th scope="col">First</th><th scope="col">Gender</th><th scope="col">Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let data of tableData; let i = index">
+              <ng-template [ngIf] = "i< 3">
+                  <td>{{i+1}}</td><td>{{data.name}}</td><td>{{data.gender}}</td><td>{{data.company|titlecase }}</td>
+              </ng-template>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md12 col-lg-6 mb-4">
+    <div class="card">
+      <div class="card-header">
+        <i class="icon-list"></i>  Light Table (Hover effect)
+        <!-- <input [(ngModel)] = "searchname" type="text" class="form-control" name="searchname" /> -->
+        </div>
+      <div class="chart-body">
+        <table class="table table-border table-hover mb-0">
+          <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th><th scope="col">First</th><th scope="col">Gender</th><th scope="col">Company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let data of tableData; let i = index">
+        <ng-template [ngIf] = "i< 3">
+            <td>{{i+1}}</td><td>{{data.name}}</td><td>{{data.gender}}</td><td>{{data.company|titlecase }}</td>
+        </ng-template>
+      </tr>
+    </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md12 col-lg-6">
+    <div class="card">
+      <div class="card-header">
+        <i class="icon-list"></i>  Dark Table (Hover effect)
+      </div>
+      <div class="chart-body">
+        <table class="table table-border table-hover mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th><th scope="col">First</th><th scope="col">Gender</th><th scope="col">Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let data of tableData; let i = index">
+              <ng-template [ngIf] = "i< 3">
+                  <td>{{i+1}}</td><td>{{data.name}}</td><td>{{data.gender}}</td><td>{{data.company|titlecase }}</td>
+              </ng-template>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

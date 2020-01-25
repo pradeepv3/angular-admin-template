@@ -1,0 +1,18 @@
+<div class="container-wrapper">
+  <div [hidden]="!loading" class="pageoverlay"><i class="fa fa-spinner"></i></div>
+	<app-header  (sidebarUpdate) = "navbarService.updateSidebar()"></app-header>
+	<div class="container-fluid main-content">
+		<div class="row">
+        <nav class="sidebar">
+          <app-sidebar></app-sidebar>
+        </nav>
+        <div class="main-panel">
+          <breadcrumb></breadcrumb>
+          <main class="main-panel_content">
+            <router-outlet (activate)="onActivate($event)"></router-outlet>
+          </main>
+          <app-footer></app-footer>
+        </div>
+		</div>
+	</div>
+</div>

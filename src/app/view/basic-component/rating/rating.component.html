@@ -1,0 +1,41 @@
+<div class="row mb-4">
+  <div class="col-12 col-md-6 mb-sm-4 mb-md-0">
+    <cards>
+      <div cardHeader>Basic</div>
+      <div cardFooter>Rate: <b>{{rate}}</b></div>
+      <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"></rating>
+    </cards>
+  </div>
+  <div class="col-12 col-md-6 mb-sm-4 mb-md-0">
+    <cards>
+      <div cardHeader>Dynamic</div>
+      <div cardFooter>Rate: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;  Hovering over: <b>{{overStar || "none"}}</b></div>
+      <rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
+        (onHover)="hoveringOver($event)" (onLeave)="resetStar()"
+        [titles]="['one','two','three']"></rating>
+<span class="label"
+      [ngClass]="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}"
+      [ngStyle]="{display: (overStar && !isReadonly) ? 'inline' : 'none'}">{{percent}}%</span>
+    </cards>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <cards>
+      <div cardHeader>Custom Icons</div>
+      <div class="mb-3">
+        <rating [max]="10" [(ngModel)]="x" [customTemplate]="t" style="color: #0275d8;font-size: 20px;"></rating>
+        <b class="ml-3">(<i>Rate:</i> {{x}})</b>
+        <ng-template #t let-index="index" let-value="value">{{index < value ? '&#9745;' : '&#9744;'}}</ng-template>
+      </div>
+ 
+      <div class="mb-3">
+        <rating [max]="10" [(ngModel)]="y" [customTemplate]="tt"></rating> <b class="ml-3">(<i>Rate:</i> {{y}})</b>
+        <ng-template #tt let-i="index" let-v="value">
+        <button class="btn btn-{{i < v ? 'warning' : 'default'}}">{{i < v ? '&#9733;' : '&#9734;'}}</button>
+        </ng-template>
+      </div>
+    </cards>
+  </div>
+</div>

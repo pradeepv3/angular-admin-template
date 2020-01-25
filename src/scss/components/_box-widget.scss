@@ -1,0 +1,28 @@
+.box-widget {
+    color: #FFF;
+  .fa {
+      color: #333;
+    }
+  .icon-box-circle {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background: #f1f2f3;
+    font-size: 25px;
+  }
+  .box-widget__text {
+    width: calc(100% - 65px);
+    white-space: nowrap;
+    p{
+      margin: 0;
+    }
+    .count {
+      font-size: 20px;
+      
+    }
+    .count_label{
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<div class="row mb-4">
+  <div class="col-12">
+
+    <cards>
+      <div cardHeader>Pagination</div>
+      <pagination [totalItems]="30" [(ngModel)]="currentPage"></pagination>
+      <pagination [totalItems]="66" [(ngModel)]="currentPage"></pagination>
+      <pagination [totalItems]="88" [(ngModel)]="currentPage" (numPages)="smallnumPages = $event"></pagination>
+      <pagination [boundaryLinks]="showBoundaryLinks" [totalItems]="55" [(ngModel)]="currentPage"></pagination>
+      <pagination [boundaryLinks]="true" [totalItems]="77" [(ngModel)]="currentPage" previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+      <div cardFooter>
+        <button  type="button" class="btn btn-info" (click)="setPage(3)">Set current page to: 3</button>
+      </div>
+      
+    </cards>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+
+    <cards>
+      <div cardHeader>Pager</div>
+      <pagination
+      [directionLinks]="false"
+      [totalItems]="totalItems"
+      [(ngModel)]="currentPage"
+      (numPages)="smallnumPages = $event">
+    </pagination>
+    <pager
+      [totalItems]="totalItems"
+      [(ngModel)]="currentPage"
+      (pageChanged)="pageChanged($event)"
+      pageBtnClass="btn"
+      [itemsPerPage]="10"
+      class="pull-left">
+    </pager>
+    </cards>
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="card mb-4">
+  <div class="card-header">Carousel Basic</div>
+  <div class="card-body">
+    <div class="carousel-wrapper">
+      <carousel>
+        <slide>
+          <img src="https://valor-software.com/ngx-bootstrap/assets/images/nature/1.jpg" alt="first slide" style="display: block; width: 100%;">
+        </slide>
+        <slide>
+          <img src="https://valor-software.com/ngx-bootstrap/assets/images/nature/2.jpg" alt="second slide" style="display: block; width: 100%;">
+        </slide>
+        <slide>
+          <img src="https://valor-software.com/ngx-bootstrap/assets/images/nature/3.jpg" alt="third slide" style="display: block; width: 100%;">
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">Multilist </div>
+  <div class="card-body">
+    <div class="carousel-multilist">
+ <carousel [itemsPerSlide]="itemsPerSlide"
+          [singleSlideOffset]="singleSlideOffset"
+          [interval]="false"
+          [noWrap]="noWrap">
+        <slide *ngFor="let slide of slides; let index=index">
+          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+          <div class="carousel-caption">
+            <h4>Slide {{index}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>
+
+For More options check here: <a href="https://valor-software.com/ngx-bootstrap/#/carousel" target="blank">NGX-Bootstarp Carousel</a>

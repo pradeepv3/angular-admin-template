@@ -1,0 +1,84 @@
+<div class="card  mb-4">
+  <div class="card-header">Standard Buttons</div>
+  <div class="card-body">
+    <p>Bootstrap includes six predefined button styles, each serving its own semantic purpose.</p>
+    <div class="row align-items-center"> 
+      <div class="col-6 col-sm-4 col-md-3 col-xl mb-3 mb-xl-0"  *ngFor="let buttons of buttonValues">
+        <button type="button" class="btn btn-block btn-{{buttons.buttonClass}}">{{buttons.buttonName}}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">Outline Buttons</div>
+  <div class="card-body">
+    <p>Replace the default modifier classes with the <code>.btn-outline-*</code></p>
+      <div class="row align-items-center"> 
+        <div class="col-6 col-sm-4 col-md-3 col-xl mb-3 mb-xl-0"  *ngFor="let buttons of buttonValues">
+          <button type="button" class="btn btn-block btn-outline-{{buttons.buttonClass}}">{{buttons.buttonName}}</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">Square Buttons</div>
+  <div class="card-body">
+    <p>Add New classe with the <code>.btn-square</code></p>
+      <div class="row align-items-center"> 
+        <div class="col-6 col-sm-4 col-md-3 col-xl mb-3 mb-xl-0"  *ngFor="let buttons of buttonValues">
+          <button type="button" class="btn btn-square btn-block btn-{{buttons.buttonClass}}">{{buttons.buttonName}}</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">Pill Buttons</div>
+  <div class="card-body">
+    <p>Add New classe with the <code>.btn-pill</code></p>
+      <div class="row align-items-center"> 
+        <div class="col-6 col-sm-4 col-md-3 col-xl mb-3 mb-xl-0"  *ngFor="let buttons of buttonValues">
+          <button type="button" class="btn btn-pill btn-block btn-{{buttons.buttonClass}}">{{buttons.buttonName}}</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">Button Size</div>
+  <div class="card-body">
+    <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.</p>
+      <div class="row align-items-center"> 
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <button type="button" class="btn btn-primary btn-lg mr-1">Primary</button>
+          <button type="button" class="btn btn-primary mr-1">Primary</button>
+          <button type="button" class="btn btn-primary btn-sm mr-1">Primary</button>
+        </div>
+         <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <button type="button" class="btn btn-outline-primary btn-lg mr-1">Primary</button>
+          <button type="button" class="btn btn-outline-primary mr-1">Primary</button>
+          <button type="button" class="btn btn-outline-primary btn-sm mr-1">Primary</button>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+          <button type="button" class="btn btn-pill btn-primary btn-lg mr-1">Primary</button>
+          <button type="button" class="btn btn-pill btn-primary mr-1">Primary</button>
+          <button type="button" class="btn btn-pill btn-primary btn-sm mr-1">Primary</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-header">Icon Buttons</div>
+  <div class="card-body">
+      <div class="row align-items-center"> 
+        <div class="col-6 col-sm-4 col-md-3 col-xl mb-3 mb-xl-0"  *ngFor="let buttons of buttonValues">
+          <button type="button" class="btn btn-pill btn-block btn-{{buttons.buttonClass}}">
+            <i class="fa fa-folder"></i>
+            {{buttons.buttonName}}</button>
+        </div>
+      </div>
+    </div>
+</div>

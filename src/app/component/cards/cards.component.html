@@ -1,0 +1,15 @@
+<div class="card {{cardWrapperClass}}" remove-wrapper>
+  <div #cardHeaderContent class="card-header" *ngIf="showHeader">
+    <ng-content  select="[cardHeader]"></ng-content>
+  </div>
+    <svg *ngIf= "cardImage == 'placeholder' else imageShow" class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+    <ng-template #imageShow><img *ngIf="cardImage"  src="{{cardImage}}" alt=""></ng-template>
+    
+    <div class="card-body">
+      <ng-content></ng-content>
+    </div>
+    
+    <div #cardFooterContent class="card-footer" *ngIf="showFooter">
+      <ng-content  select="[cardFooter]"></ng-content>
+    </div>
+</div>

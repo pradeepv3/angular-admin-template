@@ -1,0 +1,71 @@
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">
+				<i class="icon-note"></i>  Form ( Reactive Form )
+			</div>
+			<div class="card-body">
+				<form [formGroup] = "registerationForm" (ngSubmit) = "onRegister()" novalidate>
+          	<div class="form-row">
+						<div class="form-group col-md-6" [ngClass] = "{error: registerationForm.get('firstname').status == 'INVALID' && fromsubmitted}">
+							<label for="firstname">First Name <span class="error-msg">Please Enter valid First name</span></label>
+              <input type="text" class="form-control" id="firstname" placeholder="First Name" formControlName="firstname">
+              
+            </div>
+            <div class="form-group col-md-6" [ngClass] = "{error: registerationForm.get('lastname').status == 'INVALID'  && fromsubmitted}">
+              <label for="lastname">Last Name <span class="error-msg">Please Enter valid Last name</span></label>
+              <input type="text" class="form-control" id="lastname" placeholder="Last Name"  formControlName="lastname">
+            </div>
+          </div>
+					<div class="form-row">
+						<div class="form-group col-md-6" [ngClass] = "{error: registerationForm.get('email').status == 'INVALID'  && fromsubmitted}">
+							<label for="inputEmail4">Email <span class="error-msg">Please Enter valid Email</span></label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email"  formControlName="email">
+            </div>
+            <div class="form-group col-md-6" [ngClass] = "{error: registerationForm.get('password').status == 'INVALID'  && fromsubmitted}">
+              <label for="inputPassword4">Password <span class="error-msg">Please Enter valid password</span></label>
+              <input type="password" class="form-control" id="inputPassword4" placeholder="Password" formControlName="password">
+            </div>
+          </div>
+  <div class="form-group" [ngClass] = "{error: registerationForm.get('address1').status == 'INVALID'  && fromsubmitted}">
+    <label for="inputAddress">Address <span class="error-msg">Please Enter valid address</span></label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"  formControlName="address1">
+  </div>
+  <div class="form-group" >
+    <label for="inputAddress2">Address 2 (Optional)</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"  formControlName="address2">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-5" [ngClass] = "{error: registerationForm.get('city').status == 'INVALID'  && fromsubmitted}">
+      <label for="inputCity">City <span class="error-msg">(Please Enter )</span></label>
+      <input type="text" class="form-control" id="inputCity"  formControlName="city">
+    </div>
+    <div class="form-group col-md-4" [ngClass] = "{error: registerationForm.get('state').status == 'INVALID'  && fromsubmitted}">
+      <label for="inputState">State <span class="error-msg">Please Enter valid name</span></label>
+      <select id="inputState" class="form-control"  formControlName="state">
+        <option selected>Choose State</option>
+        <option value="new">New</option>
+      </select>
+    </div>
+    <div class="form-group col-md-3" [ngClass] = "{error: registerationForm.get('zip').status == 'INVALID'  && fromsubmitted}">
+      <label for="inputZip">Zip <span class="error-msg">Please Enter valid name</span></label>
+      <input type="text" class="form-control" id="inputZip"  formControlName="zip">
+    </div>
+  </div>
+  <div class="form-group" [ngClass] = "{error: registerationForm.get('iagree').status == 'INVALID'  && fromsubmitted}">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="iagree">
+      <label class="form-check-label" for="gridCheck">
+        Agree <span class="error-msg">Please Agree</span>
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+  
+</form>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.icons-wrapper {
+  padding: 25px;
+  .icons {
+    .fa,
+    i[class*="icon-"]  {
+      font-size: 25px;
+    }
+  }
+}
