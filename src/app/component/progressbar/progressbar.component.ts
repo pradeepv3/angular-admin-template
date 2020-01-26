@@ -1,9 +1,8 @@
-import { Component, Input } from '@angular/core'
-
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "progressbar-widget",
-  templateUrl: './progressbar.component.html'
+  templateUrl: "./progressbar.component.html"
 })
 export class ProgressBarWidgetComponent {
   @Input() progressValue: any;
@@ -11,9 +10,8 @@ export class ProgressBarWidgetComponent {
   @Input() progressText: any;
   @Input() progressBarMaxValue: string;
   @Input() progressBarValue: any;
-  @Input() progressBarAnimated: boolean;
-  @Input() progressBarStriped: boolean;
+  @Input() progressBarAnimated: any;
+  @Input() progressBarStriped: any;
   @Input() progressBarType: string;
-  @Input() settingsMenu: boolean;
-
+  @Input() settingsMenu: any;
 }
