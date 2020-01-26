@@ -16,11 +16,39 @@ PradeepUI Angular 7 admin template is an easy to use and customize template suit
 Make sure you have Node.js and npm package manager installed in your development machine.
 
 To check node and npm version.
-To check node version run > node -v in a terminal/console window.
-To check npm version run > nmm -v
+
+- To check node version run > node -v in a terminal/console window.
+- To check npm version run > nmm -v
 
 ### Angular CLI
 
 To Install angular globaly run below commands in terminals/window command prompt.
 
-> npm install -g @angular/cli
+```bash
+npm install -g @angular/cli
+```
+
+## Installation
+
+### Clone repo
+
+```bash
+# clone the repo
+$ git clone https://github.com/pradeepv3/angular-admin-template.git my-project
+
+# go into app directory
+$ cd my-project
+
+# install app dependencies
+$ npm install
+```
+
+## Usage
+
+```bash
+# serve with hot reload at localhost:4200.
+$ ng serve
+
+# build for production with minification
+$ ng build
+```
