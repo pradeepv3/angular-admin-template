@@ -18,7 +18,7 @@
     "@types/datatables.net": "1.10.14",
     "@types/jquery": "3.3.29",
     "angular-datatables": "7.0.0",
-    "bootstrap": "^4.3.0",
+    "bootstrap": "^4.3.1",
     "chart.js": "2.7.3",
     "core-js": "2.6.4",
     "datatables.net": "2.1.1",
